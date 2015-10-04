@@ -1,19 +1,18 @@
 {
-  "name": "react-transform-boilerplate",
+  "name": "reactjs-base-project",
   "version": "1.0.0",
   "description": "",
   "scripts": {
     "clean": "rimraf dist",
     "build:webpack": "NODE_ENV=production webpack --config webpack.config.prod.js",
     "build": "npm run clean && npm run build:webpack && cp index.html dist",
-    "deploy": "npm run build && aws s3 sync dist s3://l11-component-library/ --grants read=uri=http://acs.amazonaws.com/groups/global/AllUsers",
     "start": "node devServer.js",
     "lint": "eslint src"
   },
   "private": true,
   "repository": {
     "type": "git",
-    "url": "https://github.com/LevelEleven/component-library.git"
+    "url": "https://github.com/duncanfinney/reactjs-base-project.git"
   },
   "keywords": [],
   "author": "LevelEleven",
@@ -32,7 +31,6 @@
     "express": "^4.13.3",
     "postcss-loader": "^0.6.0",
     "raw-loader": "^0.5.1",
-    "react-bootstrap": "^0.25.2",
     "react-transform-catch-errors": "^1.0.0",
     "react-transform-hmr": "^1.0.0",
     "redbox-react": "^1.0.1",

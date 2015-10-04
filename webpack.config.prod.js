@@ -7,7 +7,7 @@ var cssnext = require('cssnext');
 module.exports = {
   devtool: 'source-map',
   entry: [
-    './docs/index'
+    './src/index'
   ],
   output: {
     path: path.join(__dirname, 'dist'),
@@ -32,8 +32,7 @@ module.exports = {
       {
         test: /\.js$/,
         loaders: ['babel'],
-        include: [path.join(__dirname, 'docs'), path.join(__dirname, 'components')],
-        exclude: [path.join(__dirname, 'docs', 'examples')]
+        include: [path.join(__dirname, 'src')],
       },
       {
         test: /\.css$/,
